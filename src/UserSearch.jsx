@@ -1,12 +1,10 @@
     import { useEffect, useState } from "react";
     
     export default function UserSearch() {
-    // 1) ניהול State
     const [users, setUsers] = useState([]);      
     const [search, setSearch] = useState("");     
     const [loading, setLoading] = useState(true); 
     
-    // 2) טעינת נתונים פעם אחת בלבד
     useEffect(() => {
         fetch("https://jsonplaceholder.typicode.com/users")
         .then((res) => res.json())
